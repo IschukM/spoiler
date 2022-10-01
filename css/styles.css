@@ -1,0 +1,44 @@
+.spoiler {
+  padding: 50px;
+  list-style: none;
+}
+
+.spoiler__title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.spoiler__title::before,
+.spoiler__title::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 8px;
+}
+.spoiler__title::before {
+  transform: rotate(40deg);
+  left: 0;
+}
+.spoiler__title::after {
+  transform: rotate(-40deg);
+  left: 8px;
+}
+.spoiler__title.active::before,
+.spoiler__title.active::after{
+background-color: red;
+}
+.spoiler__title.active::before{
+   transform: rotate(-40deg);
+}
+.spoiler__title.active::after{
+  transform: rotate(40deg);
+
+}
+.spoiler__text {
+  display: none;
+}
