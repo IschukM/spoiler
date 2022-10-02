@@ -1,5 +1,12 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
 .spoiler {
-  padding: 50px;
+  padding: 300px 0 50px 50px;
   list-style: none;
 }
 
@@ -29,16 +36,39 @@
   left: 8px;
 }
 .spoiler__title.active::before,
-.spoiler__title.active::after{
-background-color: red;
+.spoiler__title.active::after {
+  background-color: red;
 }
-.spoiler__title.active::before{
-   transform: rotate(-40deg);
+.spoiler__title.active::before {
+  transform: rotate(-40deg);
 }
-.spoiler__title.active::after{
+.spoiler__title.active::after {
   transform: rotate(40deg);
-
 }
 .spoiler__text {
   display: none;
+}
+
+/* випадаюче меню */
+
+.menu {
+  background-color: slategrey;
+  margin-bottom: 300p;
+}
+.menu__list {
+  display: flex;
+  gap: 30px;
+}
+.menu__link {
+  color: white;
+}
+
+menu li {
+  position: relative;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 40px;
+  left: 5px;
 }
